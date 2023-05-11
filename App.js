@@ -23,6 +23,10 @@ import Appointments from './Telemed/screens/Appointments';
 import Accepted from './Telemed/screens/Accpeted';
 import Facilitys from './Telemed/screens/Facilitys';
 import Accepteds from './Telemed/screens/Accepteds';
+import Rough from './Telemed/screens/Rough';
+import PatientDetailsWire from './Telemed/screens/PatientDetailsWire';
+import PopupMenu from './Telemed/screens/PopupMenu';
+import Roughs from './Telemed/screens/Roughs';
 
 
 
@@ -52,9 +56,13 @@ const App = () => {
       {/* <Proceed/> */}
       {/* <EditPersonalInfo/> */}
       {/* <Signup/> */}
-      <Accepteds/>
+      {/* <Accepteds/> */}
       {/* <MainForm/> */}
       {/* <Facilitys/> */}
+      {/* <Rough/> */}
+      {/* <PatientDetailsWire/> */}
+      {/* <PopupMenu/> */}
+      <Roughs/>
     </View>
   )
 }

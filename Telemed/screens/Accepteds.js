@@ -5,6 +5,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Octicons from 'react-native-vector-icons/Octicons'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import { SwipeListView } from 'react-native-swipe-list-view';
+import Rough from './Rough'
 
 const Accepteds = () => {
 

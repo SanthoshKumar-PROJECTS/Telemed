@@ -2,16 +2,34 @@ import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native
 import React, { useState } from 'react'
 import Octicons from 'react-native-vector-icons/Octicons'
 
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const Rough = ({route}) => {
+
+//     const{item} = route.params;
+
+//   return (
+//     <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+//       <Text style={{color:'black'}}>{item.name}</Text>
+//     </View>
+//   )
+// }
+
+// export default Rough;
+
+// const styles = StyleSheet.create({})
+
 const Provider = ({navigation}) => {
 
     const [data,setData] = useState([
         {
             "id":1,
-            "name":'Name',
+            "name":'Steve',
         },
         {
             "id":2,
-            "name":'Name',
+            "name":'Smith',
         },
         {
             "id":3,
@@ -55,7 +73,7 @@ const Provider = ({navigation}) => {
     
         const newItem = data.map((val)=>{
             if(val.id===item.id){  
-                return{...val,selected:!val.selected}
+                return{...val,selected:!val.selected}   
             }
             else{
                 return val
@@ -64,8 +82,8 @@ const Provider = ({navigation}) => {
         setData(newItem)
         console.log(item.name)
     }
-      
-    const itemNumber = data.filter(item=>item.selected).length;
+
+    const [counter, setCounter] = useState(0);
 
     const ItemView = ({item,index}) => {
 
@@ -80,6 +98,7 @@ const Provider = ({navigation}) => {
                             </Text>
                     </TouchableOpacity>
                 </View>
+                
         )
     }
 
@@ -99,7 +118,7 @@ const Provider = ({navigation}) => {
           
             <View>
                 <View style={{ borderWidth: 1, borderColor: '#333333' }}></View>
-                <Text style={{ color: '#eaeaea', fontSize: 15, marginLeft: 15,top:20 ,fontFamily: 'SpaceGrotesk-Regular'}}>{itemNumber} Provider(s) Selected</Text>
+                <Text style={{ color: '#eaeaea', fontSize: 15, marginLeft: 15,top:20 ,fontFamily: 'SpaceGrotesk-Regular'}}>{counter} Provider(s) Selected</Text>
                 <TouchableOpacity onPress={()=>ToProceed()} style={{ backgroundColor: 'green', width: 135, height: 45,top:-10,  borderRadius: 5, marginLeft: 210 }}>
                     <Text style={{ color: '#eaeaea', fontSize: 25, textAlign: 'center', marginTop: 4,fontFamily: 'SpaceGrotesk-Regular' }}>Submit</Text>
                 </TouchableOpacity>

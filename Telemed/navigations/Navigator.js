@@ -19,6 +19,8 @@ import Calendar from '../screens/Calendar';
 import Provider from '../screens/Provider';
 import Proceed from '../screens/Proceed';
 import Facilitys from '../screens/Facilitys';
+import Accepteds from '../screens/Accepteds';
+import Rough from '../screens/Rough';
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +28,7 @@ const Navigator = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-            <Stack.Screen
+            {/* <Stack.Screen
                     name='Login'
                     component={Login}
                     options={{ headerShown: false }}
@@ -90,7 +92,7 @@ const Navigator = () => {
                     name='Calendar'
                     component={Calendar}
                     options={{ headerShown: false }}
-                />
+                /> */}
 
                  <Stack.Screen
                     name='Provider'
@@ -100,6 +102,16 @@ const Navigator = () => {
                 <Stack.Screen
                     name='Proceed'
                     component={Proceed}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name='Accepteds'
+                    component={Accepteds}
+                    options={{ headerShown: false }}
+                />
+                <Stack.Screen
+                    name='Rough'
+                    component={Rough}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
